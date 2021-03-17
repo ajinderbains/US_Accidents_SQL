@@ -1,11 +1,25 @@
 # SQL Analysis for US Accidents
 
-### Objective
-I am responsible for Initial cleaning of US_Accidents CSV file for DataBase.
-In [Cleaning jupyter notebook](https://github.com/AlyseD/Group_Project/blob/abains/Cleaningdata_prov.ipynb) I have divided the file in different tables and kept "ID" column as primary key.[ERD file](https://github.com/AlyseD/Group_Project/blob/abains/US_Accident_Schema.docx)
-I am also responsible for ERD for database and created DDL(Data definition Language) for tables in our Database. [DDL Query](https://github.com/AlyseD/Group_Project/blob/abains/US_Accident_Schema.sql)
+## Objective for SQL Analysis:
+Data is organized and  stored in different tables and then these tables are joined and manipulated to find the count of accidents  based on different features.
+I have tried to find the answers  for following questions:
+- What is count of accidents for each Severity type?
+- What is count of accidents for each accident Reporting Source?
+- What is count of accidents based on Day and Night?
+- What is count for accidents for high and low Severity for each weather Condition like Rainy,Cloudy,Foggy,Snow,Wind Speed and Visibility
+
+Following functions are used to generate queries
+- Joins
+- Like 
+- Comparison operaters
+- Count,Max,Min,Avg
+- IN operator
+
 
 ### Approach for cleaning
+ I have divided the file in different tables and kept "ID" column as primary key.[ERD file](https://github.com/AlyseD/Group_Project/blob/abains/US_Accident_Schema.docx)
+I am also responsible for ERD for database and created DDL(Data definition Language) for tables in our Database. [DDL Query](https://github.com/AlyseD/Group_Project/blob/abains/US_Accident_Schema.sql)
+
 - First CSV file is uploaded in Dataframe and then check all the columns for null values and unique values.
 - "ID" column has non null and unique values .
 - "End-Ltd" and "End- Lng" has 70% null values .
@@ -25,30 +39,13 @@ I am also responsible for ERD for database and created DDL(Data definition Langu
 
 
 
+### Uploading data in Database
 
-I am responsible for uploading dataframes in  for DataBase.
-In [uploading jupyter notebook](https://github.com/AlyseD/Group_Project/blob/abains/cleaning_4DB.ipynb) .
+I have used  [uploading jupyter notebook](https://github.com/AlyseD/Group_Project/blob/abains/cleaning_4DB.ipynb) file to upload dataframes in Database .
 
-
-Link for ERDfile is [ERD file](https://github.com/AlyseD/Group_Project/blob/abains/US_Accident_Schema.docx).
-I am also responsible for ERD for database and created DDL(Data definition Language) for tables in our Database. [DDL Query](https://github.com/AlyseD/Group_Project/blob/abains/US_Accident_Schema.sql)
 Also created queries [SQL file](https://github.com/AlyseD/Group_Project/blob/abains/queries_seg2.sql) to find the counts of accidents Severity based on weather conditions,sources ,Day/Night etc. 
 
 
-## Objective for SQL Analysis:
-Data is organized and  stored in different tables and then these tables are joined and manipulated to find the count of accidents  based on different features.
-I have tried to find the answers  for following questions:
-- What is count of accidents for each Severity type?
-- What is count of accidents for each accident Reporting Source?
-- What is count of accidents based on Day and Night?
-- What is count for accidents for high and low Severity for each weather Condition like Rainy,Cloudy,Foggy,Snow,Wind Speed and Visibility
-
-Following functions are used to generate queries
-- Joins
-- Like 
-- Comparison operaters
-- Count,Max,Min,Avg
-- IN operator
 
 ## Results from SQL queries:
 - Most of the accidents happen are of Severity Level 2 **2373210** and Severity level 3 is next highest **998913**
